@@ -43,7 +43,7 @@ void print_summary(const json& j, const string& symbol) {
 
     const auto& q = j.at("Global Quote");
 
-    auto get = [&](const char* k) -> std::string {
+    auto get = [&](const char* k) -> string {
         return q.contains(k) ? q.at(k).get<string>() : "";
     };
 
